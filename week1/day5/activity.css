@@ -1,0 +1,47 @@
+/* * {
+    background-color: #f0f8ff;
+} */
+
+body {
+    color: #f0f8ff;
+}
+
+.mobile, .desktop {
+    display: none;
+}
+
+@media (orientation: portrait) {
+    body{
+        color: green;
+        background-color: black;
+        text-align: center;
+        padding: 5%;
+    }
+    .mobile{
+        display: inline-block;
+    }
+}
+
+@media (orientation: landscape) {
+    body{
+        color: rgb(0, 0, 0);
+        background-color: #f0f8ff;
+        text-align: center;
+        padding: 5%;
+    }
+    .desktop{
+        display: inline-block;
+    }
+}
+
+.box1 { 
+    
+    background: #c0ddf0;
+    align-items: center; 
+    border-style:solid;
+    border-color:white;
+    padding: 15px; 
+    margin: 15px;
+    width:66%;
+}
+
