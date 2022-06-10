@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="senpai.css">
+    <title>Trade with Senpai</title>
+</head>
+<body>
+    <div id="navbar">
+        <a href="index.html">Home</a>
+        <a href="https://twitter.com/WallStSenpai" target="_blank">Twitter</a>
+        <a href="https://www.youtube.com/channel/UCzIFPo--WqHNafuhfiw-yKQ/featured" target="_blank">YouTube</a>
+        <a href="https://www.youtube.com/playlist?list=PLeUJYeu9FvPFype0BUYeR2NyWsrNh8LHr" target="_blank">Education</a>
+
+    </div>
+    
+    <!-- <h1 class="center about">Trade with Senpai</h1> -->
+    
+    <p class="promocode center">Trade with Senpai - Enter Promo Code Senpai
+
+        <input type="text" placeholder="Enter promo code SENPAI" name="text1">
+<input type="button" value="I'm ready!" name="Submit" onclick="validate(document.getElementsByName('text1')[0].value)">
+<script>
+  function validate(coupon) {
+    codes = new Object();
+    codes.SENPAI40 = 40;
+    codes.SENPAI = 40;
+    codes.senpai = 40;
+    console.log(coupon)
+    if (codes[coupon]) {
+        // location.href="about:blank"
+        location.href="https://www.bybit.com/en-US/register?affiliate_id=21181&group_id=0&group_type=1"
+    //   window.alert("Coupon Code Accepted! Click the Order button!");
+    } else {
+      window.alert("Sorry, you need to enter promo code SENPAI, try again!");
+    }
+  }
+
+</script>
+
+    </p>
+    
+    <div id="waifu">
+        <div class="waifuimg">
+            <img src="logtrend.png" alt="waifu">
+        </div> 
+</body>
+</html>

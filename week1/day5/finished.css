@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:900');
+
+* {
+    box-sizing: border-box;
+}
+/* box sizing subtracts padding etc. from user specified e.g. width 400px */
+
+/* wildcard selector = "*" */
+/* what does this do */
+/* if div is width 400 px 10x px of padding */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    /* flex wrap line breaks when items e.g. images need a linebreak to avoid horizontal scroll */
+    /* vh = view height */
+    /* flex-direction: column;  */
+    /* can mirror with e.g. column reverse as well */
+    /* flex-flow: row wrap; - short hand.*/ 
+    /* flex is mainly used for responsive image galleries */
+}
+
+/* viewport = the view of the page in the browser, it can be resized by the user */
+/* 100vh = fill the vertical axis of the browser window */
+
+/*  */
+
+.box {
+    color: white;
+    font-size: 100px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    padding: 15px;
+    justify-content: center;
+    /* flex-grow: 1; - use up the entire remaning whitespace */
+    /*
+    width: 400px;
+    */
+    /* flex parent can't make the children grow */
+    /* 98.5 full view width otherwise it will horizontal scroll */
+    /* flex wrap */
+}
+
+/* Colours for each box */
+
+/* .box1 { background: #eccc68; order: 1; flex-grow: 1;} */
+/* .box3 { background: #ff7f50; flex-grow: 3;} */
+/* flex-grow.. take up all remaining whitespace */
+/* flex-grow 3 will take 3x more space than flex-grow 1 */
+/* .box1 { background: #eccc68; order: 1;} */
+/* justify heavily used in flex */
+/* 
+.box1 { background: #eccc68; }
+.box2 { background: #ff6348; }
+.box3 { background: #ff7f50; }
+.box4 { background: #ff4757; }
+.box5 { background: #f1c40f; }
+.box6 { background: #e67e22; }
+.box7 { background: #2ed573; }
+.box8 { background: #1e90ff; }
+.box9 { background: #c56cf0; }
+.box10 { background: #18dcff; } */
+
+.box1 { background: #eccc68; align-items: center; }
+.box2 { background: #ff6348; align-items: center;}
+.box3 { background: #ff7f50; align-items: center;}
+.box4 { background: #ff4757; align-items: center;}
+.box5 { background: #f1c40f; align-items: center;}
+.box6 { background: #e67e22; align-items: center;}
+.box7 { background: #2ed573; align-items: center;}
+.box8 { background: #1e90ff; align-items: center;}
+.box9 { background: #c56cf0; align-items: center;}
+.box10 { background: #18dcff; align-items: center;}
+​
+.box1:hover{ background: #eccc68; flex-grow: 1; align-items: center;}
+.box2:hover{ background: #ff6348; flex-grow: 1; align-items: center;}
+.box3:hover{ background: #ff7f50; flex-grow: 1; align-items: center;}
+.box4:hover{ background: #ff4757; flex-grow: 1; align-items: center;}
+.box5:hover{ background: #f1c40f; flex-grow: 1; align-items: center;}
+.box6:hover{ background: #e67e22; flex-grow: 1; align-items: center;}
+.box7:hover{ background: #2ed573; flex-grow: 1; align-items: center;}
+.box8:hover{ background: #1e90ff; flex-grow: 1; align-items: center;}
+.box9:hover{ background: #c56cf0; flex-grow: 1; align-items: center;}
+.box10:hover{ background: #18dcff; flex-grow: 1; align-items: center;}

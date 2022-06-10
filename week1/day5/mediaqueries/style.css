@@ -1,0 +1,54 @@
+body {
+    color: green;
+}
+
+.mobile, .desktop {
+    display: none;
+
+}
+
+/* 
+@media (max-width:500px) {
+    body {
+        color:blue
+    }
+} */
+
+
+/* 
+.desktop .mobile {
+    display: none;
+} */
+
+
+@media (orientation: portrait) {
+    .title {
+        color:yellow;
+        background-color: black;
+        text-align: center;
+        padding: 5%;
+    }
+}
+
+
+@media (orientation: landscape) {
+    .subtitle {
+        color:green;
+        background-color: orange;
+        text-align: center;
+        padding: 5%;
+    }
+}
+
+
+@media (orientation: landscape) {
+.desktop {
+    display:inline-block;
+}
+}
+
+@media (orientation: portrait) {
+    .mobile {
+        display:inline-block;
+}
+}

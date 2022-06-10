@@ -1,0 +1,37 @@
+
+* {
+    box-sizing:border-box
+    /* takes away house styles implemented by browser */
+/*  ensures uniform results across all browsers */
+
+/* use browser inspect tool to edit code
+its faster than going back and forth vs code live server*/
+
+/* what is clamp */
+
+}
+
+#container {
+    display:flex;
+    width: 1000px;
+    height: 1000px;
+    font-size: clamp (12px, 34px, 48px);
+}
+
+
+#one {
+    background-color: red;
+
+}
+
+
+#two {
+    background-color: green;
+}
+
+
+
+#three {
+    background-color: blue;
+}
+
