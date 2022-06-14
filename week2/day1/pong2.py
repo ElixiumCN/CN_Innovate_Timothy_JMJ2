@@ -1,4 +1,24 @@
+
+
+# activity:
+# change colors, change background, add sounds
+
 import pygame, sys, random
+
+# bg = pygame.image.load("game.jpg")
+
+class Background(pygame.sprite.Sprite):
+    def __init__(self, image_file, location):
+        pygame.sprite.Sprite.__init__(self)  #call Sprite initializer
+        self.image = pygame.image.load(image_file)
+        self.rect = self.image.get_rect()
+        self.rect.left, self.rect.top = location
+
+
+BackGround = Background('game.jpg', [0,0])
+
+
+#REST OF ITEMS ARE BLIT'D TO SCREEN.
 
 pygame.init()
 
@@ -51,11 +71,18 @@ def ball_restart():
     ball_speed_y *= random.choice((1, -1))
     ball_speed_x *= random.choice((1, -1))
 
+def sound1():
+    ####################################
+    pygame.mixer.Sound.play(crash_sound)
+    pygame.mixer.music.stop()
+    ####################################
+    largeText = pygame.font.SysFont("comicsansms",115)
+    TextSurf, TextRect = text_objects("You Crashed", largeText)
+
 #########
     if opponent.top <= 0: opponent.top = 0
     if opponent.bottom >= screen_height:
         opponent.bottom = screen_height -10
-
 
 ball = pygame.Rect(screen_width/2 - 15, screen_height/2 - 15, 30, 30)
 
@@ -65,10 +92,9 @@ opponent = pygame.Rect(10, screen_height/2 - 70, 10, 140)
 
 # colors
 
-bg_color = pygame.Color('grey12')
+bg_color = (0,68,129)
 
-light_grey = (200, 200, 200)
-
+light_grey = (255,164,0)
 
 # animation
 
@@ -86,6 +112,9 @@ while True:
             pygame.quit()
             sys.exit()
 
+        screen.fill([255, 255, 255])
+        screen.blit(BackGround.image, BackGround.rect)
+
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_DOWN:
                 player_speed += 7
@@ -101,7 +130,7 @@ while True:
     ball_animation()
     player_animation()
     opponent_animation()
-
+    sound1()
 
     screen.fill(bg_color)
 
@@ -115,3 +144,6 @@ while True:
 
     pygame.display.flip()
     clock.tick(60)
+
+    ##
+
