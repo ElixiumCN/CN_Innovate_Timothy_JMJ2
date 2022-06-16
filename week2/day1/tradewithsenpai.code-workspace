@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\tradewithsenpai"
+		},
+		{
+			"path": "..\\..\\..\\codenation2"
+		},
+		{
+			"path": "..\\.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "tradewithsenpai"
+	}
+}

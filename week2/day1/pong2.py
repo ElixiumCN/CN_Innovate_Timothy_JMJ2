@@ -71,13 +71,13 @@ def ball_restart():
     ball_speed_y *= random.choice((1, -1))
     ball_speed_x *= random.choice((1, -1))
 
-def sound1():
-    ####################################
-    pygame.mixer.Sound.play(crash_sound)
-    pygame.mixer.music.stop()
-    ####################################
-    largeText = pygame.font.SysFont("comicsansms",115)
-    TextSurf, TextRect = text_objects("You Crashed", largeText)
+# def sounder():
+#     ####################################
+#     pygame.mixer.Sound.play(crash_sound)
+#     pygame.mixer.music.stop()
+#     ####################################
+#     largeText = pygame.font.SysFont("comicsansms",115)
+#     TextSurf, TextRect = text_objects("You Crashed", largeText)
 
 #########
     if opponent.top <= 0: opponent.top = 0
@@ -130,7 +130,7 @@ while True:
     ball_animation()
     player_animation()
     opponent_animation()
-    sound1()
+    # sounder()
 
     screen.fill(bg_color)
 
